@@ -8,4 +8,10 @@ export default defineConfig({
 		react(),
 		tailwindcss(),
 	],
+	base: '/animal-encyclopedia/',
+	build: {
+		outDir: 'dist',
+		assetsDir: 'assets',
+		sourcemap: false,
+	}
 })
