@@ -3,7 +3,7 @@
     "target": "ES2019",
     "lib": ["DOM", "DOM.Iterable", "ES2019"],
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "jsx": "react-jsx",
     "allowJs": false,
     "strict": true,
@@ -15,8 +15,16 @@
     "isolatedModules": true,
     "noEmit": true,
     "noImplicitAny": false,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "vite.config.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
 }
